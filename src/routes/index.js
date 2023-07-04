@@ -1,15 +1,8 @@
 const newsRouter = require('./news.route')
+const siteRouter = require('./sites.router')
 const route = (app) => {
-    app.get('/', (req, res) => {
-        res.render('home');
-    });
     app.use('/news', newsRouter);
-    app.get('/search', (req, res) => {
-        res.render('search');
-    });
-    app.post('/search', (req, res) => {
-        console.log(req.body)
-        res.send('');
-    });
+    // home and search
+    app.use('/', siteRouter);
 }
 module.exports = route
