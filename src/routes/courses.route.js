@@ -1,5 +1,5 @@
 const express = require('express')
 const router = express.Router();
 const coursesController = require('../app/controllers/CoursesController')
-router.get('/:name', coursesController.show)
+router.get('/:name', coursesController.create)
 module.exports = router
