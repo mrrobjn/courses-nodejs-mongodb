@@ -15,7 +15,11 @@ app.use(express.urlencoded({
 app.use(express.json())
 
 // template engine
-app.engine('.hbs', engine({ extname: '.hbs' }));
+app.engine('.hbs', engine({
+  extname: '.hbs', helpers: {
+    sum: (a, b) => a + b,
+  }
+}));
 app.set('view engine', 'hbs');
 app.set("views", `${__dirname}\\resources\\views`);
 

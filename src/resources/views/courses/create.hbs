@@ -1,9 +1,18 @@
 <div class="mt-4 w-50 m-auto">
-    <h1>Thêm khóa học</h1>
-    <form action="">
+    <h1>Create new Course</h1>
+    <form method="post" action="/courses/post">
         <div class="form-group">
             <label for="name">Tên khóa học</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control mb-4" name="name" id="name">
         </div>
+        <div class="form-group">
+            <label for="description">Mô tả</label>
+            <input type="text" class="form-control mb-4" name="description" id="description">
+        </div>
+        <div class="form-group">
+            <label for="image">Ảnh</label>
+            <input type="text" class="form-control mb-4" name="image" id="image">
+        </div>
+        <button type="submit" class="btn-primary btn mt-4 w-25">Create</button>
     </form>
 </div>
